@@ -1,0 +1,1989 @@
+---
+#  This is an example scene description for the raytracer framework created 
+#  for the Computer Science course "Introduction to Computer Graphics"
+#  taught at the University of Groningen by Tobias Isenberg.
+#
+#  The scene description format we use is based on YAML, which is a human friendly 
+#  data serialization standard. This gives us a flexible format which should be
+#  fairly easy to make both backward and forward compatible (i.e., by ignoring
+#  unknown directives). In addition parsers are available for many languages.
+#  See http://www.yaml.org/ for more information on YAML.
+#
+#  The example scene description should largely speak for itself. By now
+#  it should be clear that the #-character can be used to insert comments.
+
+Eye: [200,200,1000]  
+
+Shadows: true
+MaxRecursionDepth: 20
+
+Lights:
+#- position: [-1000,600,500]
+#  color: [1.0,1.0,1.0]
+- position: [-200,600,1500]
+#  color: [1.0,0.0,0.0]
+  color: [0.4,0.4,0.8]
+- position: [600,600,1500]
+#  color: [1.0,0.0,0.0]
+  color: [0.8,0.8,0.4]
+
+Objects:
+- type: sphere
+  position: [45,60,150]
+  radius: 10
+  material: # blue
+    color: [0.0,0.0,1.0]
+    ka: 0.0
+    kd: 0.7
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [69.781792, 153.014603, 104.15419]
+  point2: [111.153595, 193.782211, 116.861595]
+  point3: [119.901794, 228.088394, 107.684196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [69.781792, 153.014603, 104.15419]
+  point2: [119.901794, 228.088394, 107.684196]
+  point3: [82.775192, 226.81839, 108.887794]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [309.676819, 112.672195, 38.881996]
+  point2: [320.725403, 146.92041, 55.519398]
+  point3: [307.732788, 124.25, 72.476196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [320.725403, 146.92041, 55.519398]
+  point2: [306.204376, 115.179802, 106.754791]
+  point3: [307.732788, 124.25, 72.476196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [311.825378, 164.415405, 86.604599]
+  point2: [286.414581, 174.422409, 67.650589]
+  point3: [306.204376, 115.179802, 106.754791]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [309.676819, 112.672195, 38.881996]
+  point2: [286.414581, 174.422409, 67.650589]
+  point3: [320.725403, 146.92041, 55.519398]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [320.725403, 146.92041, 55.519398]
+  point2: [286.414581, 174.422409, 67.650589]
+  point3: [311.825378, 164.415405, 86.604599]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [306.204376, 115.179802, 106.754791]
+  point2: [320.725403, 146.92041, 55.519398]
+  point3: [311.825378, 164.415405, 86.604599]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [234.250183, 169.658203, 20.363796]
+  point2: [123.86319, 148.060394, 41.090996]
+  point3: [119.933197, 167.671402, 71.988197]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [234.250183, 169.658203, 20.363796]
+  point2: [119.933197, 167.671402, 71.988197]
+  point3: [216.71019, 197.960999, 71.851196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [234.250183, 169.658203, 20.363796]
+  point2: [216.71019, 197.960999, 71.851196]
+  point3: [286.414581, 174.422409, 67.650589]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [178.969803, 145.206207, 19.728994]
+  point2: [123.86319, 148.060394, 41.090996]
+  point3: [234.250183, 169.658203, 20.363796]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [309.676819, 112.672195, 38.881996]
+  point2: [223.87439, 144.785004, 5.398798]
+  point3: [234.250183, 169.658203, 20.363796]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [223.87439, 144.785004, 5.398798]
+  point2: [178.969803, 145.206207, 19.728994]
+  point3: [234.250183, 169.658203, 20.363796]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [286.414581, 174.422409, 67.650589]
+  point2: [309.676819, 112.672195, 38.881996]
+  point3: [234.250183, 169.658203, 20.363796]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [177.469391, 143.292999, 124.727798]
+  point2: [222.195007, 143.194595, 139.032196]
+  point3: [234.155396, 170.349197, 121.157394]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [237.719788, 38.695801, 123.874596]
+  point2: [217.751587, 20.979799, 132.769196]
+  point3: [281.933807, 21.577, 107.988594]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [85.593597, 93.425598, 99.526993]
+  point2: [67.738396, 86.8368, 69.146797]
+  point3: [125.493797, 54.2528, 61.139595]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [166.903198, 52.568401, 78.182793]
+  point2: [209.738007, 53.883198, 73.681793]
+  point3: [177.941193, 72.964401, 110.198196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [264.674988, 45.478203, 68.774399]
+  point2: [214.548004, 47.662998, 91.341995]
+  point3: [209.738007, 53.883198, 73.681793]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [69.781792, 153.014603, 104.15419]
+  point2: [82.775192, 226.81839, 108.887794]
+  point3: [45.013794, 160.461594, 96.128799]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [306.204376, 115.179802, 106.754791]
+  point2: [237.719788, 38.695801, 123.874596]
+  point3: [283.412994, 42.1264, 99.610397]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [264.674988, 45.478203, 68.774399]
+  point2: [258.188599, 21.618601, 53.659195]
+  point3: [287.63681, 21.9876, 41.507195]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [307.732788, 124.25, 72.476196]
+  point2: [264.674988, 45.478203, 68.774399]
+  point3: [314.962006, 73.840401, 51.780396]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [218.578796, 21.0886, 10.465998]
+  point2: [287.63681, 21.9876, 41.507195]
+  point3: [258.188599, 21.618601, 53.659195]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [97.415596, 188.701996, 41.515594]
+  point2: [125.433594, 227.240387, 31.257996]
+  point3: [98.542198, 178.9776, 73.091393]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [66.293793, 180.860397, 45.655796]
+  point2: [76.975395, 179.348206, 69.856194]
+  point3: [95.951996, 233.672394, 37.550594]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [97.415596, 188.701996, 41.515594]
+  point2: [66.293793, 180.860397, 45.655796]
+  point3: [95.951996, 233.672394, 37.550594]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [67.738396, 86.8368, 69.146797]
+  point2: [51.514992, 107.613602, 37.665195]
+  point3: [95.678795, 107.060394, 29.089996]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [93.450401, 20.0, 34.423996]
+  point2: [124.057602, 27.170401, 68.271797]
+  point3: [113.749199, 47.904602, 39.843994]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [133.984589, 26.4114, 29.416393]
+  point2: [133.421204, 66.212204, 33.446594]
+  point3: [179.010788, 72.701797, 33.188595]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [240.261795, 37.3232, 20.237398]
+  point2: [231.110214, 97.620201, -6e-06]
+  point3: [309.676819, 112.672195, 38.881996]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [153.285202, 98.199402, 17.470997]
+  point2: [95.678795, 107.060394, 29.089996]
+  point3: [123.86319, 148.060394, 41.090996]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [207.704803, 50.9114, 35.523396]
+  point2: [196.796799, 95.380203, 16.709995]
+  point3: [231.110214, 97.620201, -6e-06]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [258.188599, 21.618601, 53.659195]
+  point2: [207.704803, 50.9114, 35.523396]
+  point3: [208.360794, 22.2332, 60.269196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [98.542198, 178.9776, 73.091393]
+  point2: [125.433594, 227.240387, 31.257996]
+  point3: [76.975395, 179.348206, 69.856194]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [309.676819, 112.672195, 38.881996]
+  point2: [307.732788, 124.25, 72.476196]
+  point3: [314.962006, 73.840401, 51.780396]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [264.674988, 45.478203, 68.774399]
+  point2: [307.732788, 124.25, 72.476196]
+  point3: [320.166595, 96.130997, 86.547791]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [281.933807, 21.577, 107.988594]
+  point2: [217.751587, 20.979799, 132.769196]
+  point3: [276.202423, 21.669201, 88.317398]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [276.202423, 21.669201, 88.317398]
+  point2: [217.751587, 20.979799, 132.769196]
+  point3: [174.471191, 21.9648, 104.432991]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [137.036591, 150.622192, 106.5812]
+  point2: [119.933197, 167.671402, 71.988197]
+  point3: [87.810997, 142.191589, 117.517403]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [98.542198, 178.9776, 73.091393]
+  point2: [69.781792, 153.014603, 104.15419]
+  point3: [87.810997, 142.191589, 117.517403]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [76.975395, 179.348206, 69.856194]
+  point2: [45.013794, 160.461594, 96.128799]
+  point3: [82.775192, 226.81839, 108.887794]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [34.366589, 103.989601, 97.126999]
+  point2: [87.810997, 142.191589, 117.517403]
+  point3: [69.781792, 153.014603, 104.15419]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [166.903198, 52.568401, 78.182793]
+  point2: [177.941193, 72.964401, 110.198196]
+  point3: [131.821991, 24.1754, 112.081596]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [234.155396, 170.349197, 121.157394]
+  point2: [306.204376, 115.179802, 106.754791]
+  point3: [286.414581, 174.422409, 67.650589]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [209.738007, 53.883198, 73.681793]
+  point2: [189.106796, 101.212196, 127.733994]
+  point3: [177.941193, 72.964401, 110.198196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [237.719788, 38.695801, 123.874596]
+  point2: [213.817596, 48.341198, 115.488396]
+  point3: [217.751587, 20.979799, 132.769196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [125.493797, 54.2528, 61.139595]
+  point2: [114.808395, 48.9296, 106.041191]
+  point3: [132.434784, 66.399796, 110.81179]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [87.810997, 142.191589, 117.517403]
+  point2: [119.933197, 167.671402, 71.988197]
+  point3: [98.542198, 178.9776, 73.091393]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [276.202423, 21.669201, 88.317398]
+  point2: [264.674988, 45.478203, 68.774399]
+  point3: [283.412994, 42.1264, 99.610397]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [264.674988, 45.478203, 68.774399]
+  point2: [240.261795, 37.3232, 20.237398]
+  point3: [314.962006, 73.840401, 51.780396]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [95.678795, 107.060394, 29.089996]
+  point2: [88.2938, 143.832397, 24.866196]
+  point3: [123.86319, 148.060394, 41.090996]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [125.433594, 227.240387, 31.257996]
+  point2: [97.415596, 188.701996, 41.515594]
+  point3: [95.951996, 233.672394, 37.550594]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [31.767996, 157.300003, 55.288197]
+  point2: [70.740799, 153.36261, 38.071598]
+  point3: [51.514992, 107.613602, 37.665195]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [88.2938, 143.832397, 24.866196]
+  point2: [51.514992, 107.613602, 37.665195]
+  point3: [70.740799, 153.36261, 38.071598]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [177.001999, 56.764801, 56.828396]
+  point2: [124.057602, 27.170401, 68.271797]
+  point3: [133.984589, 26.4114, 29.416393]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [207.704803, 50.9114, 35.523396]
+  point2: [240.261795, 37.3232, 20.237398]
+  point3: [218.578796, 21.0886, 10.465998]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [258.188599, 21.618601, 53.659195]
+  point2: [209.738007, 53.883198, 73.681793]
+  point3: [207.704803, 50.9114, 35.523396]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [196.796799, 95.380203, 16.709995]
+  point2: [153.285202, 98.199402, 17.470997]
+  point3: [178.969803, 145.206207, 19.728994]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [231.110214, 97.620201, -6e-06]
+  point2: [196.796799, 95.380203, 16.709995]
+  point3: [178.969803, 145.206207, 19.728994]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [231.110214, 97.620201, -6e-06]
+  point2: [178.969803, 145.206207, 19.728994]
+  point3: [223.87439, 144.785004, 5.398798]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [133.421204, 66.212204, 33.446594]
+  point2: [153.285202, 98.199402, 17.470997]
+  point3: [179.010788, 72.701797, 33.188595]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [93.450401, 20.0, 34.423996]
+  point2: [113.749199, 47.904602, 39.843994]
+  point3: [133.984589, 26.4114, 29.416393]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [207.704803, 50.9114, 35.523396]
+  point2: [231.110214, 97.620201, -6e-06]
+  point3: [240.261795, 37.3232, 20.237398]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [177.001999, 56.764801, 56.828396]
+  point2: [166.903198, 52.568401, 78.182793]
+  point3: [124.057602, 27.170401, 68.271797]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [51.514992, 107.613602, 37.665195]
+  point2: [67.738396, 86.8368, 69.146797]
+  point3: [20.0, 103.071999, 59.161598]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [70.740799, 153.36261, 38.071598]
+  point2: [66.293793, 180.860397, 45.655796]
+  point3: [97.415596, 188.701996, 41.515594]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [98.542198, 178.9776, 73.091393]
+  point2: [70.740799, 153.36261, 38.071598]
+  point3: [97.415596, 188.701996, 41.515594]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [231.110214, 97.620201, -6e-06]
+  point2: [223.87439, 144.785004, 5.398798]
+  point3: [309.676819, 112.672195, 38.881996]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [287.63681, 21.9876, 41.507195]
+  point2: [240.261795, 37.3232, 20.237398]
+  point3: [264.674988, 45.478203, 68.774399]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [306.204376, 115.179802, 106.754791]
+  point2: [320.166595, 96.130997, 86.547791]
+  point3: [307.732788, 124.25, 72.476196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [85.593597, 93.425598, 99.526993]
+  point2: [137.780396, 90.864601, 124.611794]
+  point3: [87.810997, 142.191589, 117.517403]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [34.366589, 103.989601, 97.126999]
+  point2: [45.013794, 160.461594, 96.128799]
+  point3: [20.0, 103.071999, 59.161598]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [209.738007, 53.883198, 73.681793]
+  point2: [214.548004, 47.662998, 91.341995]
+  point3: [213.817596, 48.341198, 115.488396]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [132.434784, 66.399796, 110.81179]
+  point2: [137.780396, 90.864601, 124.611794]
+  point3: [85.593597, 93.425598, 99.526993]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [189.106796, 101.212196, 127.733994]
+  point2: [177.469391, 143.292999, 124.727798]
+  point3: [137.036591, 150.622192, 106.5812]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [132.434784, 66.399796, 110.81179]
+  point2: [131.821991, 24.1754, 112.081596]
+  point3: [177.941193, 72.964401, 110.198196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [213.817596, 48.341198, 115.488396]
+  point2: [174.471191, 21.9648, 104.432991]
+  point3: [217.751587, 20.979799, 132.769196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [122.299393, 27.068001, 73.939392]
+  point2: [92.722992, 20.174601, 106.254791]
+  point3: [114.808395, 48.9296, 106.041191]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [34.366589, 103.989601, 97.126999]
+  point2: [67.738396, 86.8368, 69.146797]
+  point3: [85.593597, 93.425598, 99.526993]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [111.153595, 193.782211, 116.861595]
+  point2: [98.542198, 178.9776, 73.091393]
+  point3: [119.901794, 228.088394, 107.684196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [276.202423, 21.669201, 88.317398]
+  point2: [214.548004, 47.662998, 91.341995]
+  point3: [264.674988, 45.478203, 68.774399]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [264.674988, 45.478203, 68.774399]
+  point2: [320.166595, 96.130997, 86.547791]
+  point3: [283.412994, 42.1264, 99.610397]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [283.412994, 42.1264, 99.610397]
+  point2: [281.933807, 21.577, 107.988594]
+  point3: [276.202423, 21.669201, 88.317398]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [70.740799, 153.36261, 38.071598]
+  point2: [98.542198, 178.9776, 73.091393]
+  point3: [88.2938, 143.832397, 24.866196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [98.542198, 178.9776, 73.091393]
+  point2: [123.86319, 148.060394, 41.090996]
+  point3: [88.2938, 143.832397, 24.866196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [124.057602, 27.170401, 68.271797]
+  point2: [133.421204, 66.212204, 33.446594]
+  point3: [113.749199, 47.904602, 39.843994]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [174.10939, 21.298, 28.554195]
+  point2: [207.704803, 50.9114, 35.523396]
+  point3: [218.578796, 21.0886, 10.465998]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [264.674988, 45.478203, 68.774399]
+  point2: [209.738007, 53.883198, 73.681793]
+  point3: [258.188599, 21.618601, 53.659195]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [67.738396, 86.8368, 69.146797]
+  point2: [133.421204, 66.212204, 33.446594]
+  point3: [125.493797, 54.2528, 61.139595]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [196.796799, 95.380203, 16.709995]
+  point2: [179.010788, 72.701797, 33.188595]
+  point3: [153.285202, 98.199402, 17.470997]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [314.962006, 73.840401, 51.780396]
+  point2: [240.261795, 37.3232, 20.237398]
+  point3: [309.676819, 112.672195, 38.881996]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [208.360794, 22.2332, 60.269196]
+  point2: [207.704803, 50.9114, 35.523396]
+  point3: [174.10939, 21.298, 28.554195]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [125.493797, 54.2528, 61.139595]
+  point2: [124.057602, 27.170401, 68.271797]
+  point3: [166.903198, 52.568401, 78.182793]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [124.057602, 27.170401, 68.271797]
+  point2: [93.450401, 20.0, 34.423996]
+  point3: [133.984589, 26.4114, 29.416393]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [133.421204, 66.212204, 33.446594]
+  point2: [67.738396, 86.8368, 69.146797]
+  point3: [95.678795, 107.060394, 29.089996]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [213.817596, 48.341198, 115.488396]
+  point2: [189.106796, 101.212196, 127.733994]
+  point3: [209.738007, 53.883198, 73.681793]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [237.719788, 38.695801, 123.874596]
+  point2: [281.933807, 21.577, 107.988594]
+  point3: [283.412994, 42.1264, 99.610397]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [306.204376, 115.179802, 106.754791]
+  point2: [222.195007, 143.194595, 139.032196]
+  point3: [231.328598, 100.765602, 143.723389]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [276.202423, 21.669201, 88.317398]
+  point2: [174.471191, 21.9648, 104.432991]
+  point3: [214.548004, 47.662998, 91.341995]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [119.901794, 228.088394, 107.684196]
+  point2: [98.542198, 178.9776, 73.091393]
+  point3: [76.975395, 179.348206, 69.856194]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [45.013794, 160.461594, 96.128799]
+  point2: [76.975395, 179.348206, 69.856194]
+  point3: [66.293793, 180.860397, 45.655796]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [69.781792, 153.014603, 104.15419]
+  point2: [45.013794, 160.461594, 96.128799]
+  point3: [34.366589, 103.989601, 97.126999]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [34.366589, 103.989601, 97.126999]
+  point2: [85.593597, 93.425598, 99.526993]
+  point3: [87.810997, 142.191589, 117.517403]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [122.299393, 27.068001, 73.939392]
+  point2: [166.903198, 52.568401, 78.182793]
+  point3: [131.821991, 24.1754, 112.081596]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [114.808395, 48.9296, 106.041191]
+  point2: [166.903198, 52.568401, 78.182793]
+  point3: [122.299393, 27.068001, 73.939392]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [132.434784, 66.399796, 110.81179]
+  point2: [114.808395, 48.9296, 106.041191]
+  point3: [131.821991, 24.1754, 112.081596]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [189.106796, 101.212196, 127.733994]
+  point2: [237.719788, 38.695801, 123.874596]
+  point3: [231.328598, 100.765602, 143.723389]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [137.780396, 90.864601, 124.611794]
+  point2: [177.941193, 72.964401, 110.198196]
+  point3: [189.106796, 101.212196, 127.733994]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [137.036591, 150.622192, 106.5812]
+  point2: [234.155396, 170.349197, 121.157394]
+  point3: [216.71019, 197.960999, 71.851196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [137.036591, 150.622192, 106.5812]
+  point2: [216.71019, 197.960999, 71.851196]
+  point3: [119.933197, 167.671402, 71.988197]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [234.155396, 170.349197, 121.157394]
+  point2: [286.414581, 174.422409, 67.650589]
+  point3: [216.71019, 197.960999, 71.851196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [189.106796, 101.212196, 127.733994]
+  point2: [137.036591, 150.622192, 106.5812]
+  point3: [137.780396, 90.864601, 124.611794]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [213.817596, 48.341198, 115.488396]
+  point2: [237.719788, 38.695801, 123.874596]
+  point3: [189.106796, 101.212196, 127.733994]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [114.808395, 48.9296, 106.041191]
+  point2: [125.493797, 54.2528, 61.139595]
+  point3: [166.903198, 52.568401, 78.182793]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [132.434784, 66.399796, 110.81179]
+  point2: [85.593597, 93.425598, 99.526993]
+  point3: [125.493797, 54.2528, 61.139595]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [122.299393, 27.068001, 73.939392]
+  point2: [131.821991, 24.1754, 112.081596]
+  point3: [92.722992, 20.174601, 106.254791]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [98.542198, 178.9776, 73.091393]
+  point2: [111.153595, 193.782211, 116.861595]
+  point3: [69.781792, 153.014603, 104.15419]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [137.780396, 90.864601, 124.611794]
+  point2: [137.036591, 150.622192, 106.5812]
+  point3: [87.810997, 142.191589, 117.517403]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [306.204376, 115.179802, 106.754791]
+  point2: [231.328598, 100.765602, 143.723389]
+  point3: [237.719788, 38.695801, 123.874596]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [306.204376, 115.179802, 106.754791]
+  point2: [283.412994, 42.1264, 99.610397]
+  point3: [320.166595, 96.130997, 86.547791]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [95.678795, 107.060394, 29.089996]
+  point2: [51.514992, 107.613602, 37.665195]
+  point3: [88.2938, 143.832397, 24.866196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [133.984589, 26.4114, 29.416393]
+  point2: [179.010788, 72.701797, 33.188595]
+  point3: [177.001999, 56.764801, 56.828396]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [179.010788, 72.701797, 33.188595]
+  point2: [196.796799, 95.380203, 16.709995]
+  point3: [209.738007, 53.883198, 73.681793]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [113.749199, 47.904602, 39.843994]
+  point2: [133.421204, 66.212204, 33.446594]
+  point3: [133.984589, 26.4114, 29.416393]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [178.969803, 145.206207, 19.728994]
+  point2: [153.285202, 98.199402, 17.470997]
+  point3: [123.86319, 148.060394, 41.090996]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [153.285202, 98.199402, 17.470997]
+  point2: [133.421204, 66.212204, 33.446594]
+  point3: [95.678795, 107.060394, 29.089996]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [240.261795, 37.3232, 20.237398]
+  point2: [287.63681, 21.9876, 41.507195]
+  point3: [218.578796, 21.0886, 10.465998]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [177.001999, 56.764801, 56.828396]
+  point2: [179.010788, 72.701797, 33.188595]
+  point3: [209.738007, 53.883198, 73.681793]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [166.903198, 52.568401, 78.182793]
+  point2: [177.001999, 56.764801, 56.828396]
+  point3: [209.738007, 53.883198, 73.681793]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [124.057602, 27.170401, 68.271797]
+  point2: [125.493797, 54.2528, 61.139595]
+  point3: [133.421204, 66.212204, 33.446594]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [31.767996, 157.300003, 55.288197]
+  point2: [51.514992, 107.613602, 37.665195]
+  point3: [20.0, 103.071999, 59.161598]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [31.767996, 157.300003, 55.288197]
+  point2: [66.293793, 180.860397, 45.655796]
+  point3: [70.740799, 153.36261, 38.071598]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [76.975395, 179.348206, 69.856194]
+  point2: [125.433594, 227.240387, 31.257996]
+  point3: [95.951996, 233.672394, 37.550594]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [98.542198, 178.9776, 73.091393]
+  point2: [119.933197, 167.671402, 71.988197]
+  point3: [123.86319, 148.060394, 41.090996]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [258.188599, 21.618601, 53.659195]
+  point2: [208.360794, 22.2332, 60.269196]
+  point3: [174.10939, 21.298, 28.554195]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [258.188599, 21.618601, 53.659195]
+  point2: [174.10939, 21.298, 28.554195]
+  point3: [218.578796, 21.0886, 10.465998]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [207.704803, 50.9114, 35.523396]
+  point2: [209.738007, 53.883198, 73.681793]
+  point3: [196.796799, 95.380203, 16.709995]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [82.775192, 226.81839, 108.887794]
+  point2: [119.901794, 228.088394, 107.684196]
+  point3: [76.975395, 179.348206, 69.856194]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [45.013794, 160.461594, 96.128799]
+  point2: [66.293793, 180.860397, 45.655796]
+  point3: [31.767996, 157.300003, 55.288197]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [45.013794, 160.461594, 96.128799]
+  point2: [31.767996, 157.300003, 55.288197]
+  point3: [20.0, 103.071999, 59.161598]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [67.738396, 86.8368, 69.146797]
+  point2: [34.366589, 103.989601, 97.126999]
+  point3: [20.0, 103.071999, 59.161598]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [174.471191, 21.9648, 104.432991]
+  point2: [213.817596, 48.341198, 115.488396]
+  point3: [214.548004, 47.662998, 91.341995]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [114.808395, 48.9296, 106.041191]
+  point2: [92.722992, 20.174601, 106.254791]
+  point3: [131.821991, 24.1754, 112.081596]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [137.780396, 90.864601, 124.611794]
+  point2: [132.434784, 66.399796, 110.81179]
+  point3: [177.941193, 72.964401, 110.198196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [189.106796, 101.212196, 127.733994]
+  point2: [231.328598, 100.765602, 143.723389]
+  point3: [222.195007, 143.194595, 139.032196]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [189.106796, 101.212196, 127.733994]
+  point2: [222.195007, 143.194595, 139.032196]
+  point3: [177.469391, 143.292999, 124.727798]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [222.195007, 143.194595, 139.032196]
+  point2: [306.204376, 115.179802, 106.754791]
+  point3: [234.155396, 170.349197, 121.157394]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
+- type: triangle
+  point1: [177.469391, 143.292999, 124.727798]
+  point2: [234.155396, 170.349197, 121.157394]
+  point3: [137.036591, 150.622192, 106.5812]
+  normal1: [0,0,0] #not used
+  normal2: [0,0,0] #not used
+  normal3: [0,0,0] #not used
+  material: 
+    color: [1.0,0.5,0.0]
+    ka: 0.2
+    kd: 0.3
+    ks: 0.9
+    n: 64
